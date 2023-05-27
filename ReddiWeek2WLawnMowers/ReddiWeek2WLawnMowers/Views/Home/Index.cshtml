@@ -1,0 +1,43 @@
+﻿@*
+    Created by Satya Praneeth Reddi
+    333333333333333333333333
+*@
+
+@model MowersModel // We need to add this declaration in order to map our properties in the model, to the form controls on this view.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Created by Satya Praneeth Reddi-->
+        <title>Reddis Lawn Mowing</title>
+        <meta name="viewport" content = "width = device-width" />
+        <meta charset = "utf-8" />
+    </head>
+
+    <body>
+        <h1>Reddi's Lawn Mowing Services</h1>
+        <h3>Binding Model</h3>
+        <p>Lawn mowing season typically lasts 20 weeks. The weekly charge for mowing a lawn are as follows: 
+            <ul>If your lawn size is: 
+                <li>10000 square feet or less: $25 per week.</li>
+                <li>10000 to 25000 square feet: $30 per week.</li>
+                <li>25000 to 35000 square feet: $35 per week.</li>
+                <li>above 35000 square feet: $40 per week.</li>
+            </ul>
+        </p>
+        <form asp-action="Index" asp-controller="Home" method = 'POST'>
+            <p>
+                <label asp-for="Name">Enter your Name: </label><input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Area">Enter Lawn Area in Square Feet (min 1000 Sq Ft): </label><input asp-for="Area" />
+                <span asp-validation-for="Area"></span>
+            </p>
+            <p>
+                <label asp-for="NumberOfWeeks">Enter Number of weeks (between 1 & 20): </label><input asp-for="NumberOfWeeks" />
+                <span asp-validation-for="NumberOfWeeks"></span>
+            </p>
+            <p><input type ="submit" /> </p>
+        </form>
+    </body>
+</html>

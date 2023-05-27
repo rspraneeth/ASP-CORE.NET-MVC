@@ -1,0 +1,26 @@
+﻿@*
+    Created by Satya Praneeth Reddi
+    4444444444444444444444444444444
+*@
+@model MowersModel // note the @model directive at the top of the view. This will allow us to access the model's 
+<!--properties and methods from the view.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Created by Satya Praneeth Reddi-->
+        <title>Reddi's Lawn Mowing'</title>
+        <meta name = "viewport" content="width=device-width" />
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Reddi's Lawn Mowing Services</h1>
+        <h3>Binding Model</h3>
+        @*display the results by accessing the properties using the @Model and dot notation 
+        to access the MowersModel's properties*@
+        <h4>Quote for @Model.Name</h4>
+        <p>Total area to be Mowed @Model.Area Sq Ft.</p>
+        <p>Number of weeks: @Model.NumberOfWeeks</p>
+        <p>Amount quoted for Lawn Mowing Services: $@Model.Quote.ToString("n2")</p>
+    </body>
+</html>
