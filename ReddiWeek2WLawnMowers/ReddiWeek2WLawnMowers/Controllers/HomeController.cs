@@ -7,7 +7,7 @@ namespace ReddiWeek2WLawnMowers.Controllers
     {
         /*
          * Created by Satya Praneeth Reddi
-         * 2222222222222222222
+         * 2222222222222222222222222222222
          */
         public IActionResult Index()
         {
@@ -20,7 +20,7 @@ namespace ReddiWeek2WLawnMowers.Controllers
             if (ModelState.IsValid)
             {
                 if (model.NumberOfWeeks < 1 || model.NumberOfWeeks > 20)
-                {
+                { // to add an error message to the model state
                     ModelState.AddModelError("NumberOfWeeks", "must be between 1 and 20.");
                 }
                 else if (model.Area < 1000 || model.Area > 500000)
